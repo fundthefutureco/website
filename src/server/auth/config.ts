@@ -1,6 +1,7 @@
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
+import { cache } from "react";
 import { type DefaultSession, type NextAuthConfig } from "next-auth";
-import DiscordProvider from "next-auth/providers/discord";
+import GoogleProvider from "next-auth/providers/google";
 
 import { db } from "@/server/db";
 import {
@@ -9,6 +10,7 @@ import {
   users,
   verificationTokens,
 } from "@/server/db/schema";
+import { eq } from "drizzle-orm";
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
@@ -20,6 +22,7 @@ declare module "next-auth" {
   interface Session extends DefaultSession {
     user: {
       id: string;
+      role?: "USER" | "ADMIN";
       // ...other properties
       // role: UserRole;
     } & DefaultSession["user"];
@@ -31,6 +34,17 @@ declare module "next-auth" {
   // }
 }
 
+export const getUserRole = cache(async (userId: string) => {
+  const [user] = await db
+    .select({
+      role: users.role,
+    })
+    .from(users)
+    .where(eq(users.id, userId));
+
+  return user?.role;
+});
+
 /**
  * Options for NextAuth.js used to configure adapters, providers, callbacks, etc.
  *
@@ -38,7 +52,7 @@ declare module "next-auth" {
  */
 export const authConfig = {
   providers: [
-    DiscordProvider,
+    GoogleProvider,
     /**
      * ...add more providers here.
      *
@@ -56,11 +70,12 @@ export const authConfig = {
     verificationTokensTable: verificationTokens,
   }),
   callbacks: {
-    session: ({ session, user }) => ({
+    session: async ({ session, user }) => ({
       ...session,
       user: {
         ...session.user,
         id: user.id,
+        role: (await getUserRole(user.id)) ?? "USER",
       },
     }),
   },

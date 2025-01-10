@@ -5,6 +5,12 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  experimental: {
+    ppr: "incremental",
+    reactCompiler: true,
+    inlineCss: true,
+  },
+};
 
 export default config;
