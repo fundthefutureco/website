@@ -42,18 +42,22 @@ export function Header({ white }: { white?: boolean }) {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button
-            variant="default"
-            className="bg-orange-500 text-white hover:bg-orange-600"
-          >
-            Apply Now
-          </Button>
-          <Button
-            variant="outline"
-            className="border-white text-white hover:bg-white hover:text-blue-900"
-          >
-            Donate
-          </Button>
+          <Link href="/apply">
+            <Button
+              variant="default"
+              className="bg-orange-500 text-white hover:bg-orange-600"
+            >
+              Apply Now
+            </Button>
+          </Link>
+          <Link href="/donate">
+            <Button
+              variant="outline"
+              className="border-white text-black"
+            >
+              Donate
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

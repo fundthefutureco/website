@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -32,15 +33,16 @@ export function Hero() {
             Come and create a better future with us.
           </p>
           <div className="flex justify-center gap-4">
-            <Button
-              size="lg"
-              className="rounded-full bg-[#ff6347] text-white hover:bg-orange-700"
-            >
-              Apply for a Grant
-            </Button>
-            <Button size="lg" variant="outline" className="text-black">
-              Donate now
-            </Button>
+            <Link href="/apply">
+              <Button size="lg" className="rounded-full bg-[#ff6347] text-white hover:bg-orange-700">
+                Apply for a Grant
+              </Button>
+            </Link>
+            <Link href="/donate">
+              <Button size="lg" variant="outline" className="text-black">
+                Donate now
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
