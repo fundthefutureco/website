@@ -2,10 +2,9 @@ import React, { Suspense } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CreateMeeting } from "./_components/create-meeting-modal";
 import { Display } from "./_components/display";
-import { api, HydrateClient } from "@/trpc/server";
+import { HydrateClient } from "@/trpc/server";
 
 export default function Page() {
-  void api.events.getEvents.prefetch();
   return (
     <main className="container mx-auto py-20">
       <HydrateClient>
