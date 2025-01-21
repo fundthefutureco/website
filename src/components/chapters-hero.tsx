@@ -1,6 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import Image from "next/image";
 
 export function ChaptersHero() {
   return (
@@ -8,7 +6,11 @@ export function ChaptersHero() {
       <div className="container relative mx-auto flex min-h-screen items-center">
         {/* Left circular image */}
         <div className="absolute left-0 h-[500px] w-[500px] overflow-hidden rounded-full">
-          <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dreamstime.com%2Fphotos-images%2Fgroup-little-students.html%3Fpg%3D8%26view%3Dlatest-uploads&psig=AOvVaw1geZwET4e4R9uQUlo_tO_v&ust=1736830145151000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDI8tLy8YoDFQAAAAAdAAAAABAh" alt="People Who Go to School" className="h-full w-full object-cover"/>
+          <Image
+            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dreamstime.com%2Fphotos-images%2Fgroup-little-students.html%3Fpg%3D8%26view%3Dlatest-uploads&psig=AOvVaw1geZwET4e4R9uQUlo_tO_v&ust=1736830145151000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDI8tLy8YoDFQAAAAAdAAAAABAh"
+            alt="People Who Go to School"
+            className="h-full w-full object-cover"
+          />
         </div>
 
         {/* Content with margin to wrap around the circle */}
