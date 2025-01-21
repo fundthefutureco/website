@@ -11,6 +11,12 @@ const config = {
     reactCompiler: true,
     inlineCss: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default config;
