@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: "Fund the Future",
   description:
     "Fund the Future is a social impact investment fund that supports underreprivliaged highschool students with funding and excelling at extra-curricular activities",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.futurecofund.com/",
+    title: "Fund the Future",
+  },
 };
 
 export default function RootLayout({
