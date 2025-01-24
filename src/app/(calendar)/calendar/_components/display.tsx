@@ -1,4 +1,3 @@
-"use client";
 import {
   Card,
   CardHeader,
@@ -11,21 +10,38 @@ import {
   SheetContent,
   SheetHeader,
 } from "@/components/ui/sheet";
-import { api, type RouterOutputs } from "@/trpc/react";
+import { cache } from "@/lib/cache";
+import { db } from "@/server/db";
 import { format } from "date-fns";
 import { CalendarIcon, ClockIcon, MapPin } from "lucide-react";
 import React from "react";
 
-export const Display = () => {
-  const [data] = api.events.getEvents.useSuspenseQuery();
+const getEvents = cache(
+  async () => {
+    return await db.query.events.findMany({
+      columns: {
+        id: true,
+        name: true,
+        location: true,
+        date: true,
+      },
+      where: (events, { gte }) => gte(events.date, new Date()),
+      orderBy: (meetings, { asc }) => asc(meetings.date),
+      limit: 4,
+    });
+  },
+  ["events"],
+  { tags: ["events"] },
+);
+
+export const Display = async () => {
+  const data = await getEvents();
 
   return (
     <div className="flex flex-col md:flex-row md:space-x-16">
       <div className="flex w-full flex-col gap-3">
-        {data.length === 0 && <p>No upcoming meetings</p>}
-        {data.map((meeting) => (
-          <Item key={meeting.id} data={meeting} />
-        ))}
+        {!data || (data?.length === 0 && <p>No upcoming meetings</p>)}
+        {data?.map((meeting) => <Item key={meeting.id} data={meeting} />)}
       </div>
     </div>
   );
@@ -34,7 +50,7 @@ export const Display = () => {
 export const Item = ({
   data,
 }: {
-  data: RouterOutputs["events"]["getEvents"][0];
+  data: Awaited<ReturnType<typeof getEvents>>[number];
 }) => {
   const { name, date, location } = data;
   const getTimeFormat = (date: Date): string => {
