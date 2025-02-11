@@ -111,6 +111,12 @@ export function Header({ white }: { white?: boolean }) {
         </div>
 
         <nav className="hidden items-center gap-8 md:flex">
+        <Link
+            href="/"
+            className={`${white ? "text-white" : "text-black"}`}
+          >
+            Home
+          </Link>
           <Link
             href="/chapters"
             className={`${white ? "text-white" : "text-black"}`}
