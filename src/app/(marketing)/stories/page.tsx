@@ -6,10 +6,17 @@ export default function StoriesPage() {
       id: 1,
       title: "Chapter Success",
       summary:
-        "How our initiative helped bring digital learning to 500+ students",
+        "Our chapter program has been a great success so far. One of our founding chapters, Cherry Creek High School, has grown to over 40 members, and has held multiple successful member meetings, as well as running fundraising and education campaigns with other clubs at their school. One of their board members, Niels Novotny, says …  . He explained that they're currently working to expand the chapters at other schools, as well as expanding their fundraising efforts with larger companies. ",
       image: "/images/stories/education.jpg",
       date: "December 2024",
       category: "Education",
+    },
+    {
+      id: 2,
+      title: "Corporation Status and Sucess",
+      summary:
+        "Our chapter program has been a great success so far. One of our founding chapters, Cherry Creek High School, has grown to over 40 members, and has held multiple successful member meetings, as well as running fundraising and education campaigns with other clubs at their school. One of their board members, Niels Novotny, says …  . He explained that they're currently working to expand the chapters at other schools, as well as expanding their fundraising efforts with larger companies. ",
+      image: "/images/stories/education.jpg",
     }
     // Add more stories as needed
   ];
@@ -17,7 +24,7 @@ export default function StoriesPage() {
   return (
     <>
       <ImpactHero />
-
+      <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {stories.map((story) => (
             <div
@@ -49,6 +56,7 @@ export default function StoriesPage() {
             </div>
           ))}
         </div>
+      </div>
     </>
   );
 }

@@ -2,21 +2,11 @@ import React, { Suspense } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CreateMeeting } from "./_components/create-meeting-modal";
 import { Display } from "./_components/display";
-
+import { CalendarHero } from "@/components/calendar-hero";
 export default function Page() {
   return (
     <main className="container mx-auto py-20">
-      <div className="mb-12">
-        <a id="apply">
-          <h2 className="mb-4 w-full min-w-full text-3xl font-bold md:text-4xl">
-            Upcoming Meetings
-          </h2>
-        </a>
-        <p className="text-[#707070]">
-          Here are the upcoming meetings for the club. Please make sure to
-          attend them.
-        </p>
-      </div>
+      <CalendarHero />
 
       <Tabs defaultValue="table">
         <div className="flex flex-row justify-between pb-4">

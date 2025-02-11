@@ -27,20 +27,21 @@ const Chapters: NextPage = () => {
   return (
     <>
       <ChaptersHero />
-      <div className="container mx-auto flex flex-col px-4 py-8">
-        <h1 className="mb-8 text-4xl font-bold">
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="mb-12 text-4xl font-bold text-center">
           Our Fund the Future Chapters
         </h1>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {chapters.map((chapter, index) => (
             <div
               key={index}
-              className="rounded-lg bg-white p-6 shadow-md transition-transform hover:-translate-y-2"
+              className="rounded-xl bg-white p-8 shadow-lg transition-all hover:shadow-xl"
             >
-              <h2 className="mb-4 text-xl font-semibold text-gray-800">
+              <h2 className="mb-4 text-2xl font-bold text-gray-800">
                 {chapter.name}
               </h2>
-              <p className="text-gray-600">{chapter.description}</p>
+              <p className="mb-6 text-gray-600">{chapter.description}</p>
+              
             </div>
           ))}
         </div>
