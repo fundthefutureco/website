@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function CalendarHero() {
   return (
-    <div className="relative min-h-screen bg-blue-900">
+    <div className="relative min-h-screen w-full bg-blue-900">
       <div className="container relative mx-auto flex min-h-screen items-center">
         {/* Left circular image*/}
         <div className="absolute left-0 h-[400px] w-[400px] overflow-hidden rounded-full">
