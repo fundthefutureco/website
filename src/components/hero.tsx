@@ -25,20 +25,18 @@ export function Hero() {
             Our Future
           </h1>
           <p className="mb-8 text-xl text-blue-100">
-            Fund the Future is a social impact investment fund that supports
-            underreprivliaged highschool students with funding and excelling at
-            extra-curricular activities.
+          Fund the Future is a nonprofit organization dedicated to helping advance student education and access to extracurricular opportunities through fundraising initiatives and education expansion.
           </p>
           <p className="mb-12 text-xl text-blue-100">
             Come and create a better future with us.
           </p>
           <div className="flex justify-center gap-4">
-            <Link href="/apply">
+            <Link href="/contact">
               <Button size="lg" className="rounded-full bg-[#ff6347] text-white hover:bg-orange-700">
                 Apply for a Grant
               </Button>
             </Link>
-            <Link href="/donate">
+            <Link href="/contact">
               <Button size="lg" variant="outline" className="text-black">
                 Donate now
               </Button>

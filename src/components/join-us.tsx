@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-
+import Link from "next/link";
 export function JoinUs() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
@@ -15,17 +15,13 @@ export function JoinUs() {
               their skills beyond the classroom.
             </p>
             <p className="font-semibold text-blue-700">
-              Our mission is to bridge the gap between academic learning and
-              real-world experiences by providing financial support for
-              extracurricular activities that enrich students&apos; educational
-              journeys. Through our grants, we aim to foster creativity,
-              critical thinking, and personal growth, preparing students for
-              success in college and beyond.
+              Our mission is to bridge the gap between students and real-world experiences by providing financial support for extracurricular activities that enrich students’ educational journeys. Through our grants, we aim to expand opportunity for everyone, fostering creativity and personal growth in our youth. Through our educational mission, we also seek to expand fundraising as a viable financial solution for this financial barrier through education, building high school chapters across the state.
             </p>
-
+          <Link href="/contact">
             <Button className="mt-4 rounded-full bg-[#ff6347] px-8 py-3 text-white hover:bg-[#ff6347]/90">
               See How We Work
             </Button>
+          </Link>
           </div>
         </div>
         <div className="relative">

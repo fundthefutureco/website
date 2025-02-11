@@ -1,49 +1,22 @@
 import Image from "next/image";
-
+import { ImpactHero } from "@/components/impact-hero";
 export default function StoriesPage() {
   const stories = [
     {
       id: 1,
-      title: "Transforming Education in Rural Communities",
+      title: "Chapter Success",
       summary:
         "How our initiative helped bring digital learning to 500+ students",
       image: "/images/stories/education.jpg",
-      date: "March 2024",
+      date: "December 2024",
       category: "Education",
-    },
-    {
-      id: 2,
-      title: "Transforming Education in Rural Communities",
-      summary:
-        "How our initiative helped bring digital learning to 500+ students",
-      image: "/images/stories/education.jpg",
-      date: "March 2024",
-      category: "Education",
-    },
-    {
-      id: 3,
-      title: "Transforming Education in Rural Communities",
-      summary:
-        "How our initiative helped bring digital learning to 500+ students",
-      image: "/images/stories/education.jpg",
-      date: "March 2024",
-      category: "Education",
-    },
+    }
     // Add more stories as needed
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 text-center">
-      <br></br>
-      <main className="container mx-auto px-4 py-8">
-        <div className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold text-gray-900">
-            Impact Stories
-          </h1>
-          <p className="text-xl text-gray-600">
-            Real stories of change and transformation from our community
-          </p>
-        </div>
+    <>
+      <ImpactHero />
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {stories.map((story) => (
@@ -76,7 +49,6 @@ export default function StoriesPage() {
             </div>
           ))}
         </div>
-      </main>
-    </div>
+    </>
   );
 }

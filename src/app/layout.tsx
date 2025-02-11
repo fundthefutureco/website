@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Fund the Future",
   description:
-    "Fund the Future is a social impact investment fund that supports underreprivliaged highschool students with funding and excelling at extra-curricular activities",
+    "Fund the Future is a social impact fund that supports underreprivliaged highschool students with funding and excelling at extra-curricular activities",
   openGraph: {
     type: "website",
     locale: "en_US",

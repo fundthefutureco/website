@@ -1,10 +1,11 @@
+
+import { ContactHeader } from "@/components/contact-header";
+
 export default function ContactPage() {
   return (
+    <>
+    <ContactHeader />
     <main className="container mx-auto px-4 py-20">
-      <div className="mb-12">
-        <h1 className="mb-4 text-4xl font-bold text-gray-900">Contact Us</h1>
-        <p className="text-xl text-gray-600">We&apos;d love to hear from you</p>
-      </div>
       <div className="flex flex-col items-center">
         <div className="max-w-2xl rounded-lg bg-white p-8 shadow-md">
           <p className="mb-6 text-gray-700">
@@ -39,5 +40,6 @@ export default function ContactPage() {
         </div>
       </div>
     </main>
+    </>
   );
 }
