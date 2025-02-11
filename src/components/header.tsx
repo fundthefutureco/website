@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -54,22 +56,42 @@ export function Header({ white }: { white?: boolean }) {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Link href="/apply">
-              <Button
-                variant="default"
-                className="bg-orange-500 text-white hover:bg-orange-600"
+            <div className="hidden md:block">
+              <Link href="/apply">
+                <Button
+                  variant="default"
+                  className="bg-orange-500 text-white hover:bg-orange-600"
+                >
+                  Apply Now
+                </Button>
+              </Link>
+              <Link href="/donate">
+                <Button
+                  variant="outline"
+                  className="border-white text-black"
+                >
+                  Donate
+                </Button>
+              </Link>
+            </div>
+            
+            {/* Hamburger menu for mobile */}
+            <button 
+              className="md:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              <svg
+                className={`h-6 w-6 ${white ? "text-white" : "text-black"}`}
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                Apply Now
-              </Button>
-            </Link>
-            <Link href="/donate">
-              <Button
-                variant="outline"
-                className="border-white text-black"
-              >
-                Donate
-              </Button>
-            </Link>
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
           </div>
         </div>
       </header>
@@ -115,42 +137,45 @@ export function Header({ white }: { white?: boolean }) {
           </Link>
         </nav>
 
+        {/* Move the buttons and hamburger into a single container */}
         <div className="flex items-center gap-4">
-          <Link href="/apply">
-            <Button
-              variant="default"
-              className="bg-orange-500 text-white hover:bg-orange-600"
-            >
-              Apply Now
-            </Button>
-          </Link>
-          <Link href="/donate">
-            <Button
-              variant="outline"
-              className="border-white text-black"
-            >
-              Donate
-            </Button>
-          </Link>
-        </div>
-
-        {/* Add hamburger menu button for mobile */}
-        <button 
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          <svg
-            className={`h-6 w-6 ${white ? "text-white" : "text-black"}`}
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+          <div className="hidden md:block">
+            <Link href="/apply">
+              <Button
+                variant="default"
+                className="bg-orange-500 text-white hover:bg-orange-600"
+              >
+                Apply Now
+              </Button>
+            </Link>
+            <Link href="/donate">
+              <Button
+                variant="outline"
+                className="border-white text-black"
+              >
+                Donate
+              </Button>
+            </Link>
+          </div>
+          
+          {/* Hamburger menu for mobile */}
+          <button 
+            className="md:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <path d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+            <svg
+              className={`h-6 w-6 ${white ? "text-white" : "text-black"}`}
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
 
         {/* Mobile menu overlay */}
         {mobileMenuOpen && (

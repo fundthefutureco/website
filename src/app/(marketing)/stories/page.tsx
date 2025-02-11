@@ -15,7 +15,7 @@ export default function StoriesPage() {
       id: 2,
       title: "Corporation Status and Sucess",
       summary:
-        "Our chapter program has been a great success so far. One of our founding chapters, Cherry Creek High School, has grown to over 40 members, and has held multiple successful member meetings, as well as running fundraising and education campaigns with other clubs at their school. One of their board members, Niels Novotny, says …  . He explained that they're currently working to expand the chapters at other schools, as well as expanding their fundraising efforts with larger companies. ",
+        "After months of preparation and dedication, our executive board of directors is proud to announce that Fund the Future is officially in good standing as a nonprofit corporation in the state of Colorado! We're so excited that our work has taken us this far, and we know that there's so much more to do. We hope to continue making our vision of educational opportunities without financial barriers a reality. Thank you all so much for your support, and let's keep expanding opportunities together!",
       image: "/images/stories/education.jpg",
     }
     // Add more stories as needed
