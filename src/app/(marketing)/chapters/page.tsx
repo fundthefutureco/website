@@ -7,19 +7,19 @@ const chapters = [
   {
     name: "Cherry Creek High School",
     description:
-      "Learn more about our Cherry Creek chapter and its initiatives.",
+      "Over 40 members, multiple successful member meetings, and fundraising and education campaigns with other clubs at their school.",
   },
   {
     name: "Cherokee Trail High School",
-    description: "Discover the Cherokee Trail Fund the Future community.",
+    description: "A developing chapter with a small but dedicated group of members.",
   },
   {
     name: "Grandview High School",
-    description: "Explore Grandview's Fund the Future program and impact.",
+    description: "A developing chapter with a small but dedicated group of members.",
   },
   {
     name: "East High School",
-    description: "Find out about East High School's Fund the Future projects.",
+    description: "A developing chapter with a small but dedicated group of members.",
   },
 ];
 

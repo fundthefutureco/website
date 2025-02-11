@@ -6,16 +6,14 @@ export default function StoriesPage() {
       id: 1,
       title: "Chapter Success",
       summary:
-        "Our chapter program has been a great success so far. One of our founding chapters, Cherry Creek High School, has grown to over 40 members, and has held multiple successful member meetings, as well as running fundraising and education campaigns with other clubs at their school. One of their board members, Niels Novotny, says …  . He explained that they're currently working to expand the chapters at other schools, as well as expanding their fundraising efforts with larger companies. ",
+        "Our chapter program has been a great success so far. One of our founding chapters, Cherry Creek High School, has grown to over 40 members, and has held multiple successful member meetings, as well as running fundraising and education campaigns with other clubs at their school. The Creek chapter president, Krit Krishna, gives us great news on their progress. 'The Creek chapter is doing great! We're in the process of contacting multiple small businesses, planning socials and scheduling fundraisers for multiple clubs at Creek.' He hopes that they'll continue to grow and expand their impact. Our chapters have done great work so far, and we'll continue to do more! If you're interested in starting a chapter at your own school, please don't hesitate to reach out to us through our contact page.",
       image: "/images/stories/education.jpg",
-      date: "December 2024",
-      category: "Education",
     },
     {
       id: 2,
       title: "Corporation Status and Sucess",
       summary:
-        "After months of preparation and dedication, our executive board of directors is proud to announce that Fund the Future is officially in good standing as a nonprofit corporation in the state of Colorado! We're so excited that our work has taken us this far, and we know that there's so much more to do. We hope to continue making our vision of educational opportunities without financial barriers a reality. Thank you all so much for your support, and let's keep expanding opportunities together!",
+        "After months of preparation and dedication, our executive board of directors is proud to announce that Fund the Future is officially in good standing as a nonprofit corporation in the state of Colorado! We’re so excited that our work has taken us this far, and we know that there’s so much more to do. We hope to continue making our vision of educational opportunities without financial barriers a reality. Thank you all so much for your support, and let’s keep expanding opportunities together!",
       image: "/images/stories/education.jpg",
     }
     // Add more stories as needed
@@ -24,8 +22,8 @@ export default function StoriesPage() {
   return (
     <>
       <ImpactHero />
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 place-items-center">
           {stories.map((story) => (
             <div
               key={story.id}
@@ -39,12 +37,6 @@ export default function StoriesPage() {
                 />
               </div>
               <div className="p-6">
-                <div className="mb-2 flex items-center justify-between">
-                  <span className="text-sm font-medium text-blue-600">
-                    {story.category}
-                  </span>
-                  <span className="text-sm text-gray-500">{story.date}</span>
-                </div>
                 <h2 className="mb-2 text-xl font-semibold text-gray-900">
                   {story.title}
                 </h2>
