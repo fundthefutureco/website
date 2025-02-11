@@ -5,7 +5,7 @@ import { Display } from "./_components/display";
 import { CalendarHero } from "@/components/calendar-hero";
 export default function Page() {
   return (
-    <main className="container mx-auto py-20">
+    <main className="container">
       <CalendarHero />
 
       <Tabs defaultValue="table">
