@@ -41,9 +41,6 @@ export default function StoriesPage() {
                   {story.title}
                 </h2>
                 <p className="text-gray-600">{story.summary}</p>
-                <button className="mt-4 font-medium text-blue-600 hover:text-blue-800">
-                  Read more →
-                </button>
               </div>
             </div>
           ))}
