@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function ImpactHero() {
   return (
-    <div className="relative bg-blue-900">
+    <div className="relative bg-[#73ad6b]">
       <div className="container relative mx-auto flex min-h-[60vh] items-center px-4 py-20 lg:min-h-[80vh]">
         {/* Left circular image - hidden on mobile */}
         <div className="absolute left-0 hidden overflow-hidden rounded-full lg:block lg:h-[400px] lg:w-[400px]">
@@ -21,10 +21,10 @@ export function ImpactHero() {
             <br />
             Our Impact
           </h1>
-          <p className="mb-8 text-base sm:text-lg lg:text-xl text-blue-100">
+          <p className="mb-8 text-base sm:text-lg lg:text-xl text-white/90">
             Real stories of change and transformation from our community
           </p>
-          <p className="mb-12 text-base sm:text-lg lg:text-xl text-blue-100">
+          <p className="mb-12 text-base sm:text-lg lg:text-xl text-white/90">
             Come and create a better future with us.
           </p>
         </div>

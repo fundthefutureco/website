@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function DonateHero() {
   return (
-    <div className="relative bg-blue-900">
+    <div className="relative bg-[#73ad6b]">
       <div className="container relative mx-auto flex min-h-[60vh] items-center px-4 py-20 lg:min-h-[80vh]">
         {/* Left circular image - hidden on mobile */}
         <div className="absolute left-0 hidden overflow-hidden rounded-full lg:block lg:h-[400px] lg:w-[400px]">
@@ -21,10 +21,10 @@ export function DonateHero() {
             <br />
             Make a Difference
           </h1>
-          <p className="mb-8 text-base sm:text-lg lg:text-xl text-blue-100">
+          <p className="mb-8 text-base sm:text-lg lg:text-xl text-white/90">
             Your donation helps us provide opportunities for students to excel in extracurricular activities and build a brighter future.
           </p>
-          <p className="mb-12 text-base sm:text-lg lg:text-xl text-blue-100">
+          <p className="mb-12 text-base sm:text-lg lg:text-xl text-white/90">
             Every contribution counts towards creating lasting change.
           </p>
         </div>

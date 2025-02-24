@@ -60,7 +60,7 @@ export function Header({ white }: { white?: boolean }) {
               <Link href="/apply">
                 <Button
                   variant="default"
-                  className="bg-orange-500 text-white hover:bg-orange-600"
+                  className="bg-white text-[#73ad6b] hover:bg-white/90"
                 >
                   Apply Now
                 </Button>
@@ -68,7 +68,7 @@ export function Header({ white }: { white?: boolean }) {
               <Link href="/donate">
                 <Button
                   variant="outline"
-                  className="border-white text-black"
+                  className="border-white text-white hover:bg-white/10"
                 >
                   Donate
                 </Button>
@@ -149,7 +149,7 @@ export function Header({ white }: { white?: boolean }) {
             <Link href="/apply">
               <Button
                 variant="default"
-                className="bg-orange-500 text-white hover:bg-orange-600"
+                className="bg-white text-[#73ad6b] hover:bg-white/90"
               >
                 Apply Now
               </Button>
@@ -157,7 +157,7 @@ export function Header({ white }: { white?: boolean }) {
             <Link href="/donate">
               <Button
                 variant="outline"
-                className="border-white text-black"
+                className="border-white text-white hover:bg-white/10"
               >
                 Donate
               </Button>
@@ -237,7 +237,7 @@ export function Header({ white }: { white?: boolean }) {
                 <Link href="/apply" onClick={() => setMobileMenuOpen(false)}>
                   <Button
                     variant="default"
-                    className="bg-orange-500 text-white hover:bg-orange-600"
+                    className="bg-white text-[#73ad6b] hover:bg-white/90"
                   >
                     Apply Now
                   </Button>

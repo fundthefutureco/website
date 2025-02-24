@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function ContactHeader() {
   return (
-    <div className="relative bg-blue-900">
+    <div className="relative bg-[#73ad6b]">
       <div className="container relative mx-auto flex min-h-[60vh] items-center px-4 py-20 lg:min-h-[80vh]">
         {/* Left circular image - hidden on mobile */}
         <div className="absolute left-0 hidden overflow-hidden rounded-full lg:block lg:h-[400px] lg:w-[400px]">
@@ -21,10 +21,10 @@ export function ContactHeader() {
             <br />
             Contact Us
           </h1>
-          <p className="mb-8 text-base sm:text-lg lg:text-xl text-blue-100">
-            We're here to answer your questions and help you make a difference. Reach out to us to learn more about our programs and how you can get involved.
+          <p className="mb-8 text-base sm:text-lg lg:text-xl text-white/90">
+            We're here to answer your questions and help you make a difference.
           </p>
-          <p className="mb-12 text-base sm:text-lg lg:text-xl text-blue-100">
+          <p className="mb-12 text-base sm:text-lg lg:text-xl text-white/90">
             Come and create a better future with us.
           </p>
         </div>
