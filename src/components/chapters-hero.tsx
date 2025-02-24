@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function ChaptersHero() {
   return (
-    <div className="relative bg-[#73ad6b]">
+    <div className="relative bg-primary">
       <div className="container relative mx-auto flex min-h-[60vh] items-center px-4 py-20 lg:min-h-[80vh]">
         {/* Left circular image - hidden on mobile */}
         <div className="absolute left-0 hidden overflow-hidden rounded-full lg:block lg:h-[400px] lg:w-[400px]">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function CalendarHero() {
   return (
-    <div className="relative min-h-screen w-full bg-[#73ad6b]">
+    <div className="relative min-h-screen w-full bg-primary">
       <div className="container relative mx-auto flex min-h-screen items-center">
 
         {/* Content - centered on mobile, offset on desktop */}
